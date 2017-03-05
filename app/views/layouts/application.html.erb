@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Store</title>
+    <title>Bootcont</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,14 +12,14 @@
     <nav class="navbar navbar-success">
   
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"></a>
+      <a class="navbar-brand" href="/"><%= image_tag 'rails.png', alt: 'Rails' %></a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="/">Root</a></li>
-      <li><a href="#">Store</a></li>
-      <li><a href="#">Carts</a></li>
-      <li><a href="#">Line Items</a></li>
-      <li><a href="#">Products</a></li>
+      <li><a href="/store/index">Store</a></li>
+      <li><a href="/carts">Carts</a></li>
+      <li><a href="/line_items">Line Items</a></li>
+      <li><a href="/products">Products</a></li>
     </ul>
   
     </nav>
@@ -29,3 +29,4 @@
     </div>
   </body>
 </html>
+
