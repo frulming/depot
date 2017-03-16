@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @product.each do |product| %>
+    <% @products.each do |product| %>
       <tr>
         <td><%= product.title %></td>
         <td><%= (sanitize (product.description) ) %></td>

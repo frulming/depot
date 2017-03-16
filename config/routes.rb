@@ -1,14 +1,20 @@
 Rails.application.routes.draw do
-  resources :orders
-  get 'store/index'
+  get 'static/pages'
 
-  resources :line_items
-  resources :carts
-  
-  get 'store/index'
+  get 'static/home'
 
-  resources :users
-  resources :products
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "store#index"
+get 'admin' => 'admin#index'
+controller :sessions do
+get 'login' => :new
+post 'login' => :create
+delete 'logout' => :destroy
+end
+resources :users
+resources :orders
+resources :line_items
+resources :carts
+root 'store#index', as: 'store_index'
+resources :products 
+# For details on the DSL available within this file, see
+# http://guides.rubyonrails.org/routing.html
 end
