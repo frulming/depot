@@ -15,27 +15,26 @@
       <a class="navbar-brand" href="/"><%= image_tag 'rails.png', alt: 'Rails' %></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/static_pages/home">Home</a></li>
+      <li><a href="/static/home">Home</a></li>
       <li><a href="/">Store</a></li>
-      <li><a href="/carts">Carts</a></li>
-      <li><a href="/line_items">Line Items</a></li>
-      <li><a href="/products">Products</a></li>
-      <li><a href="/users/new">Log in</a></li>
-    </ul>
-  
-    </nav>
-    <div>
-    <%= yield %>
+      <li><a href="/login">Log in</a></li>
     
-    </div>
+  
+    
+    
      <% if session[:user_id] %>
- <ul>
+ 
  <li><%= link_to 'Orders', orders_path %></li>
  <li><%= link_to 'Products', products_path %></li>
  <li><%= link_to 'Users', users_path %></li>
- </ul>
- <%= button_to 'Logout', logout_path, method: :delete %>
+ 
+ <li><%= link_to 'Logout', logout_path, method: :delete %> </li>
  <% end %>
+ </ul></nav>
+ <div>
+    <%= yield %>
+    
+    </div>
   </body>
 </html>
 
